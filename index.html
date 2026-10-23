@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2874f0">
+  <meta name="description" content="Shop everyday essentials, electronics, fashion and more at Niraj Tiwari Mart.">
+  <title>Niraj Tiwari Mart | Online Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">✨ Big savings, everyday — welcome to <strong>Niraj Tiwari Mart</strong></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="Niraj Tiwari Mart home">
+        <span class="brand-name">Niraj Tiwari<span class="brand-mart">Mart</span></span>
+        <span class="plus-badge">PLUS <span>✦</span></span>
+      </a>
+      <form class="search-form" id="searchForm" role="search">
+        <button class="search-icon" type="submit" aria-label="Search">⌕</button>
+        <input id="searchInput" type="search" placeholder="Search for products, brands and more" autocomplete="off" aria-label="Search products">
+        <button class="search-clear" id="clearSearch" type="button" aria-label="Clear search" hidden>×</button>
+      </form>
+      <div class="header-actions">
+        <button class="login-button" id="openLogin"><span>♙</span> Login</button>
+        <button class="seller-link" id="sellerButton">Become a Seller</button>
+        <div class="dropdown-wrap">
+          <button class="header-link" id="moreButton" aria-expanded="false">More <span class="chevron">⌄</span></button>
+          <div class="dropdown-menu" id="moreMenu">
+            <a href="#footer">Customer Care</a>
+            <a href="#deals">Today's Deals</a>
+            <button type="button" id="aboutButton">About this store</button>
+          </div>
+        </div>
+        <button class="cart-button" id="openCart" aria-label="Open shopping cart"><span class="cart-symbol">🛒</span><span>Cart</span><span class="cart-count" id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <nav class="category-bar" aria-label="Shop by category">
+      <button class="category-item active" data-category="All"><span class="category-icon">✦</span><span>All</span></button>
+      <button class="category-item" data-category="Grocery"><span class="category-icon">🥑</span><span>Grocery</span></button>
+      <button class="category-item" data-category="Mobiles"><span class="category-icon">📱</span><span>Mobiles</span></button>
+      <button class="category-item" data-category="Fashion"><span class="category-icon">👕</span><span>Fashion</span></button>
+      <button class="category-item" data-category="Electronics"><span class="category-icon">🎧</span><span>Electronics</span></button>
+      <button class="category-item" data-category="Home"><span class="category-icon">🛋️</span><span>Home & Furniture</span></button>
+      <button class="category-item" data-category="Appliances"><span class="category-icon">🌀</span><span>Appliances</span></button>
+      <button class="category-item" data-category="Travel"><span class="category-icon">✈️</span><span>Travel</span></button>
+      <button class="category-item" data-category="Beauty"><span class="category-icon">🧴</span><span>Beauty & Toys</span></button>
+    </nav>
+
+    <section class="hero-section" aria-label="Promotions">
+      <div class="hero-carousel" id="heroCarousel">
+        <article class="hero-slide slide-one active">
+          <div class="hero-copy">
+            <span class="eyebrow">THE EVERYDAY UPGRADE</span>
+            <h1>Good finds.<br><em>Great prices.</em></h1>
+            <p>Discover the little things that make a big difference.</p>
+            <button class="hero-cta" data-shop-category="All">Explore the store <span>→</span></button>
+          </div>
+          <div class="hero-art art-shopping" aria-hidden="true"><span class="art-circle"></span><span class="art-bag">🛍️</span><span class="art-star star-a">✦</span><span class="art-star star-b">✧</span><span class="art-tag">DEALS<br>INSIDE</span></div>
+          <span class="hero-number">01 / 03</span>
+        </article>
+        <article class="hero-slide slide-two">
+          <div class="hero-copy">
+            <span class="eyebrow">TECH THAT MOVES YOU</span>
+            <h1>New tech.<br><em>New energy.</em></h1>
+            <p>Upgrade your everyday with smart picks and cool gadgets.</p>
+            <button class="hero-cta" data-shop-category="Electronics">Shop electronics <span>→</span></button>
+          </div>
+          <div class="hero-art art-tech" aria-hidden="true"><span class="tech-disc"></span><span class="tech-phone">▯</span><span class="tech-headphones">♫</span><span class="tech-spark">✳</span></div>
+          <span class="hero-number">02 / 03</span>
+        </article>
+        <article class="hero-slide slide-three">
+          <div class="hero-copy">
+            <span class="eyebrow">A LITTLE MORE YOU</span>
+            <h1>Style that<br><em>feels like you.</em></h1>
+            <p>Fresh everyday essentials, made for your kind of day.</p>
+            <button class="hero-cta" data-shop-category="Fashion">Find your style <span>→</span></button>
+          </div>
+          <div class="hero-art art-style" aria-hidden="true"><span class="style-disc"></span><span class="style-shirt">👕</span><span class="style-flower">✿</span><span class="style-sun">☼</span></div>
+          <span class="hero-number">03 / 03</span>
+        </article>
+        <button class="carousel-control prev" id="prevSlide" aria-label="Previous promotion">‹</button>
+        <button class="carousel-control next" id="nextSlide" aria-label="Next promotion">›</button>
+        <div class="carousel-dots" id="carouselDots" aria-label="Choose promotion">
+          <button class="carousel-dot active" data-slide="0" aria-label="Promotion 1"></button>
+          <button class="carousel-dot" data-slide="1" aria-label="Promotion 2"></button>
+          <button class="carousel-dot" data-slide="2" aria-label="Promotion 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefit-strip" aria-label="Shopping benefits">
+      <div><span class="benefit-icon">🚚</span><span><strong>Easy delivery</strong><small>To your doorstep</small></span></div>
+      <div><span class="benefit-icon">↩</span><span><strong>Easy returns</strong><small>On eligible items</small></span></div>
+      <div><span class="benefit-icon">🔒</span><span><strong>Secure checkout</strong><small>Demo store experience</small></span></div>
+      <div><span class="benefit-icon">♡</span><span><strong>Picks you'll love</strong><small>Everyday favourites</small></span></div>
+    </section>
+
+    <section class="products-section" id="deals">
+      <div class="section-heading">
+        <div><span class="section-kicker">HANDPICKED FOR YOU</span><h2 id="productsHeading">Deals of the Day <span class="heading-spark">✦</span></h2><p class="section-subtitle" id="resultsSummary">Good stuff, even better prices.</p></div>
+        <button class="view-all-button" id="viewAllButton">View all <span>→</span></button>
+      </div>
+      <div class="filter-chips" id="filterChips">
+        <button class="filter-chip active" data-filter="All">All products</button>
+        <button class="filter-chip" data-filter="Grocery">Grocery</button>
+        <button class="filter-chip" data-filter="Mobiles">Mobiles</button>
+        <button class="filter-chip" data-filter="Fashion">Fashion</button>
+        <button class="filter-chip" data-filter="Electronics">Electronics</button>
+        <button class="filter-chip" data-filter="Home">Home</button>
+        <button class="filter-chip" data-filter="Appliances">Appliances</button>
+        <button class="filter-chip" data-filter="Beauty">Beauty & Toys</button>
+      </div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><span>🔎</span><h3>No products found</h3><p>Try another search or category.</p><button id="resetFilters">Show all products</button></div>
+    </section>
+
+    <section class="promo-strip">
+      <div class="promo-icon">🎁</div><div><span class="section-kicker">A GOOD DAY TO SAVE</span><h2>Something nice is just a click away.</h2><p>Browse the collection and find your next favourite.</p></div><button class="promo-button" data-shop-category="All">Shop now <span>→</span></button>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="footer-main">
+      <div class="footer-brand-column"><a class="footer-brand" href="#">Niraj Tiwari<span>Mart.</span></a><p>Everyday shopping, a little more delightful.</p><div class="social-links"><a href="#footer" aria-label="Instagram">ig</a><a href="#footer" aria-label="Facebook">f</a><a href="#footer" aria-label="YouTube">▶</a></div></div>
+      <div class="footer-column"><h3>ABOUT</h3><a href="#footer">About us</a><a href="#footer">Careers</a><a href="#footer">Our story</a><a href="#footer">Press</a></div>
+      <div class="footer-column"><h3>HELP</h3><a href="#footer">Payments</a><a href="#footer">Shipping</a><a href="#footer">Cancellation & Returns</a><a href="#footer">FAQ</a></div>
+      <div class="footer-column"><h3>CONSUMER POLICY</h3><a href="#footer">Terms of use</a><a href="#footer">Privacy</a><a href="#footer">Security</a><a href="#footer">Sitemap</a></div>
+      <div class="footer-column"><h3>REGISTERED OFFICE</h3><p>Niraj Tiwari Mart<br>Demo storefront address<br>India</p><p class="footer-note">Replace this sample text with your actual business details before publishing.</p></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Niraj Tiwari Mart. Demo storefront.</span><span class="payment-methods">UPI &nbsp; • &nbsp; Cards &nbsp; • &nbsp; COD (demo)</span><a href="#top" id="backToTop">Back to top ↑</a></div>
+  </footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" aria-hidden="true">
+    <div class="drawer-header"><div><span class="section-kicker">YOUR BAG</span><h2 id="cartTitle">Shopping cart <span id="drawerCount">(0)</span></h2></div><button class="icon-button" id="closeCart" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>🛒</span><h3>Your cart is waiting</h3><p>Add a few things you love.</p><button id="continueShopping">Keep shopping</button></div>
+    <div class="cart-summary" id="cartSummary" hidden><div><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div><div><span>Delivery</span><strong class="free-delivery">FREE</strong></div><div class="summary-total"><span>Total</span><strong id="cartTotal">₹0</strong></div><button class="checkout-button" id="checkoutButton">Continue to checkout <span>→</span></button><p class="demo-note">Demo only — checkout and payment are not connected.</p></div>
+  </aside>
+
+  <section class="modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle" hidden>
+    <button class="modal-close" id="closeLogin" aria-label="Close login">×</button>
+    <div class="modal-visual"><div class="modal-logo">NT<span>+</span></div><h2>Shopping feels better with you.</h2><p>Sign in to keep your favourites close.</p><div class="modal-illustration">🛍️</div></div>
+    <div class="modal-content"><span class="section-kicker">WELCOME BACK</span><h2 id="loginTitle">Login or sign up</h2><p>Enter your mobile number to continue.</p>
+      <form id="loginForm"><label for="phoneInput">Mobile number</label><div class="phone-field"><span>+91</span><input id="phoneInput" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number" required pattern="[6-9][0-9]{9}"></div><button class="login-submit" type="submit">Continue <span>→</span></button><p class="form-message" id="loginMessage" aria-live="polite">By continuing, you agree to our Terms of Use and Privacy Policy.</p></form>
+    </div>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
